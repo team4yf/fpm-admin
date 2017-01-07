@@ -12,33 +12,11 @@ gulp.task('jshint', function(){
         .pipe(jshint.reporter('default'))  // 对代码进行报错提示
 });
 
-gulp.task('sass', function(done) {
-  gulp.src('./scss/ionic.app.scss')
-    .pipe(sass())
-    .on('error', sass.logError)
-    .pipe(gulp.dest('./css/'))
-    .pipe(minifyCss({
-      keepSpecialComments: 0
-    }))
-    .pipe(rename({ extname: '.min.css' }))
-    .pipe(gulp.dest('./css/'))
-    .on('end', done);
-});
-
 //复制 vender 的js文件到指定的目录下
 gulp.task('copy-vender',function(){
-    return gulp.src(['./vender/lodash/dist/lodash.core.min.js',
-        './vender/lodash/dist/lodash.min.js',
-        './vender/ionic/release/js/ionic.bundle.min.js',
-        './vender/angular-websocket/dist/angular-websocket.min.js'
+    return gulp.src(['./vender/lodash/dist/lodash.core.min.js'
         ])
         .pipe(gulp.dest('./lib'));
-});
-
-gulp.task('copy-fonts',function(){
-    return gulp.src([
-      './vender/ionic/release/fonts/*'])
-        .pipe(gulp.dest('./lib/fonts'));
 });
 
 // gulp.task('default', ['jshint', 'copy-vender', 'copy-fonts']);

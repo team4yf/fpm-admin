@@ -1,11 +1,6 @@
-# 2.0.0 (2017-01-05)
+# 1.0.0 (2017-01-06)
 
 Features
-- support gulp : build sass , minify css , copy vender js lib ,
-- support jshint : check the javascript code
-- support websocket : [angular-websocket](https://www.npmjs.com/package/angular-websocket)
+- use bootstrap-material UI Lib
 
-Bugfixes
-
-Break Changes
-- modify the pages
+- use bootstrap@3.3.7

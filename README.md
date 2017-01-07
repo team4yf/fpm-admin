@@ -1,5 +1,11 @@
-## hci-webapp
-扬州宏诚智能科技有限公司的app前端代码
+## fpm-admin
+fpm系列产品的标准管理后台
+
+### Features
+- 管理授权的应用
+- 查看系统运行状态
+- 重启／关闭系统
+- 用户token管理
 
 ### DevTools
 安装开发需要的工具
@@ -27,11 +33,6 @@ cnpm install
 
 ```bash
 bower install
-```
-- 编译scss文件
-
-```bash
-gulp sass
 ```
 
 - 检查前端代码
